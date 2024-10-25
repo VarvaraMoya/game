@@ -6,7 +6,7 @@ def generate_number():
     digits = random.sample(range(10), 4) #выбирает 4 уникальные цифры из диапазона от 0 до 9.
     return ''.join(map(str, digits)) #map(str, digits) преобразует каждую цифру в строку.'.join(...) объединяет строки в одно четырехзначное число и возвращает его.
 
-def count_bulls_and_cows(secret, guess): #Определяем функцию count_bulls_and_cows(secret, guess), которая принимает загаданное число и предположение пользователя.
+def count_bulls_and_cows(secret, guess):
     """Считает количество быков и коров."""
     bulls = sum(s == g for s, g in zip(secret, guess)) #zip(secret, guess) объединяет цифры загаданного и предполагаемого чисел в пары.
     # sum(s == g for s, g in zip(secret, guess)) подсчитывает количество "быков" (совпадающих цифр на одинаковых позициях).
